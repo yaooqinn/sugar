@@ -25,6 +25,8 @@ object WarehouseSCBeforeSS extends App {
     .config(custom, "kyao")
     .getOrCreate()
 
+  spark.sql("desc database default").show()
+
   val confField: Field = spark.sharedState.getClass.getDeclaredField("conf")
   confField.setAccessible(true)
   private val shared: SparkConf = confField.get(spark.sharedState).asInstanceOf[SparkConf]
@@ -57,12 +59,17 @@ object WarehouseSCBeforeSS extends App {
   println(s"=====> SessionState 3: $custom=${spark2.conf.get(custom, "")}")
 }
 
-
-//bin/spark-submit --class com.netease.mammut.spark.training.sql.WarehouseSCBeforeSS /Users/kentyao/sugar/target/mammut-spark-training-1.0-SNAPSHOT.jar
+//+-------------------------+--------------------------+
+//|database_description_item|database_description_value|
+//+-------------------------+--------------------------+
+//|            Database Name|                   default|
+//|                  Comment|          default database|
+//|                 Location|                     data1|
+//|                    Owner|                          |
+//+-------------------------+--------------------------+
 //
-// 1. Make the cloned spark conf in shared state respect the warehouse dir from the 1st SparkSession
+//
 //=====> SharedState: spark.sql.warehouse.dir=./data1
-// 2. ⏬
 //=====> SharedState: spark.sql.globalTempDatabase=alice
 //=====> SharedState: spark.sql.custom=kyao
 //=====> SessionState: spark.sql.warehouse.dir=./data2
@@ -71,14 +78,9 @@ object WarehouseSCBeforeSS extends App {
 //=====> SessionState 2: spark.sql.warehouse.dir=./data2
 //=====> SessionState 2: spark.sql.globalTempDatabase=alice
 //=====> SessionState 2: spark.sql.custom=kyao
-// 2'.🔼 OK until here
-// 3. Make the below 3 ones respect the cloned spark conf in shared state with issue 1 fixed
 //=====> SessionState RESET: spark.sql.warehouse.dir=./data1
 //=====> SessionState RESET: spark.sql.globalTempDatabase=bob
 //=====> SessionState RESET: spark.sql.custom=
-// 4. Then the SparkSessions created after RESET will be corrected.
 //=====> SessionState 3: spark.sql.warehouse.dir=./data1
 //=====> SessionState 3: spark.sql.globalTempDatabase=bob
 //=====> SessionState 3: spark.sql.custom=
-// 5. SparkSession.clearActiveSession/clearDefaultSession will make the shared state invisible and unsharable
-// They will be internal only soon (confirmed with Wenchen), so cases with them called will not be a problem
