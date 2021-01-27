@@ -14,6 +14,24 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import sys
+import shlex
+
+sys.path.insert(0, os.path.abspath('.'))
+
+import sphinx_rtd_theme
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+import sphinx_markdown_tables
+import recommonmark
+from recommonmark.transform import AutoStructify
+from recommonmark.parser import CommonMarkParser
+# source_parsers = {
+#     '.md': CommonMarkParser,
+# }
+
+source_suffix = ['.rst', '.md']
 
 # -- Project information -----------------------------------------------------
 
