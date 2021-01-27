@@ -86,5 +86,8 @@ spark-warehouse/
 *.Rproj.*
 
 .Rproj.user
+./docs/_build
+./docs/sugar
+./docs/
 
 
