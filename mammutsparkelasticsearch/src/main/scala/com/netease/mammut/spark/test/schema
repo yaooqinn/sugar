@@ -1,0 +1,254 @@
+root
+ |-- bslocation: long (nullable = true)
+ |-- bsyearlevel: long (nullable = true)
+ |-- constellation: long (nullable = true)
+ |-- devcompany: long (nullable = true)
+ |-- devmodel: long (nullable = true)
+ |-- ebinter: struct (nullable = true)
+ |    |-- 100: long (nullable = true)
+ |    |-- 101: long (nullable = true)
+ |    |-- 102: long (nullable = true)
+ |    |-- 103: long (nullable = true)
+ |    |-- 104: long (nullable = true)
+ |    |-- 105: long (nullable = true)
+ |    |-- 106: long (nullable = true)
+ |    |-- 107: long (nullable = true)
+ |    |-- 108: long (nullable = true)
+ |    |-- 109: long (nullable = true)
+ |    |-- 110: long (nullable = true)
+ |    |-- 111: long (nullable = true)
+ |    |-- 112: long (nullable = true)
+ |    |-- 113: long (nullable = true)
+ |    |-- 114: long (nullable = true)
+ |    |-- 115: long (nullable = true)
+ |    |-- 116: long (nullable = true)
+ |    |-- 117: long (nullable = true)
+ |    |-- 118: long (nullable = true)
+ |    |-- 119: long (nullable = true)
+ |    |-- 120: long (nullable = true)
+ |    |-- 121: long (nullable = true)
+ |    |-- 122: long (nullable = true)
+ |    |-- 123: long (nullable = true)
+ |    |-- 124: long (nullable = true)
+ |    |-- 125: long (nullable = true)
+ |    |-- 126: long (nullable = true)
+ |    |-- 127: long (nullable = true)
+ |    |-- 128: long (nullable = true)
+ |    |-- 129: long (nullable = true)
+ |    |-- 130: long (nullable = true)
+ |-- eduinter: struct (nullable = true)
+ |    |-- 400: long (nullable = true)
+ |    |-- 401: long (nullable = true)
+ |    |-- 402: long (nullable = true)
+ |    |-- 403: long (nullable = true)
+ |    |-- 404: long (nullable = true)
+ |    |-- 405: long (nullable = true)
+ |    |-- 406: long (nullable = true)
+ |    |-- 407: long (nullable = true)
+ |    |-- 408: long (nullable = true)
+ |    |-- 409: long (nullable = true)
+ |    |-- 410: long (nullable = true)
+ |    |-- 411: long (nullable = true)
+ |    |-- 412: long (nullable = true)
+ |    |-- 413: long (nullable = true)
+ |    |-- 414: long (nullable = true)
+ |    |-- 415: long (nullable = true)
+ |    |-- 416: long (nullable = true)
+ |    |-- 417: long (nullable = true)
+ |    |-- 418: long (nullable = true)
+ |    |-- 419: long (nullable = true)
+ |    |-- 420: long (nullable = true)
+ |    |-- 421: long (nullable = true)
+ |    |-- 422: long (nullable = true)
+ |    |-- 423: long (nullable = true)
+ |    |-- 424: long (nullable = true)
+ |    |-- 425: long (nullable = true)
+ |    |-- 426: long (nullable = true)
+ |    |-- 427: long (nullable = true)
+ |    |-- 428: long (nullable = true)
+ |    |-- 429: long (nullable = true)
+ |    |-- 430: long (nullable = true)
+ |-- flydays: long (nullable = true)
+ |-- flytimes: long (nullable = true)
+ |-- freloc: long (nullable = true)
+ |-- gender: long (nullable = true)
+ |-- haschild: long (nullable = true)
+ |-- idfa: string (nullable = true)
+ |-- imei: string (nullable = true)
+ |-- lalodetail: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- geo: struct (nullable = true)
+ |    |    |    |-- lat: double (nullable = true)
+ |    |    |    |-- lon: double (nullable = true)
+ |    |    |-- loc: long (nullable = true)
+ |    |    |-- timestamp: long (nullable = true)
+ |-- mac: string (nullable = true)
+ |-- mappinter: struct (nullable = true)
+ |    |-- 500: long (nullable = true)
+ |    |-- 501: long (nullable = true)
+ |    |-- 502: long (nullable = true)
+ |    |-- 503: long (nullable = true)
+ |    |-- 504: long (nullable = true)
+ |    |-- 505: long (nullable = true)
+ |    |-- 506: long (nullable = true)
+ |    |-- 507: long (nullable = true)
+ |    |-- 508: long (nullable = true)
+ |    |-- 509: long (nullable = true)
+ |    |-- 510: long (nullable = true)
+ |    |-- 511: long (nullable = true)
+ |    |-- 512: long (nullable = true)
+ |    |-- 513: long (nullable = true)
+ |    |-- 514: long (nullable = true)
+ |    |-- 515: long (nullable = true)
+ |    |-- 516: long (nullable = true)
+ |    |-- 517: long (nullable = true)
+ |    |-- 518: long (nullable = true)
+ |    |-- 519: long (nullable = true)
+ |    |-- 520: long (nullable = true)
+ |    |-- 521: long (nullable = true)
+ |    |-- 522: long (nullable = true)
+ |    |-- 523: long (nullable = true)
+ |    |-- 524: long (nullable = true)
+ |    |-- 525: long (nullable = true)
+ |    |-- 526: long (nullable = true)
+ |    |-- 527: long (nullable = true)
+ |    |-- 528: long (nullable = true)
+ |    |-- 529: long (nullable = true)
+ |    |-- 530: long (nullable = true)
+ |-- musicinter: struct (nullable = true)
+ |    |-- 300: long (nullable = true)
+ |    |-- 301: long (nullable = true)
+ |    |-- 302: long (nullable = true)
+ |    |-- 303: long (nullable = true)
+ |    |-- 304: long (nullable = true)
+ |    |-- 305: long (nullable = true)
+ |    |-- 306: long (nullable = true)
+ |    |-- 307: long (nullable = true)
+ |    |-- 308: long (nullable = true)
+ |    |-- 309: long (nullable = true)
+ |    |-- 310: long (nullable = true)
+ |    |-- 311: long (nullable = true)
+ |    |-- 312: long (nullable = true)
+ |    |-- 313: long (nullable = true)
+ |    |-- 314: long (nullable = true)
+ |    |-- 315: long (nullable = true)
+ |    |-- 316: long (nullable = true)
+ |    |-- 317: long (nullable = true)
+ |    |-- 318: long (nullable = true)
+ |    |-- 319: long (nullable = true)
+ |    |-- 320: long (nullable = true)
+ |    |-- 321: long (nullable = true)
+ |    |-- 322: long (nullable = true)
+ |    |-- 323: long (nullable = true)
+ |    |-- 324: long (nullable = true)
+ |    |-- 325: long (nullable = true)
+ |    |-- 326: long (nullable = true)
+ |    |-- 327: long (nullable = true)
+ |    |-- 328: long (nullable = true)
+ |    |-- 329: long (nullable = true)
+ |    |-- 330: long (nullable = true)
+ |-- netactive: long (nullable = true)
+ |-- nethabit: array (nullable = true)
+ |    |-- element: long (containsNull = true)
+ |-- newsinter: struct (nullable = true)
+ |    |-- 200: long (nullable = true)
+ |    |-- 201: long (nullable = true)
+ |    |-- 202: long (nullable = true)
+ |    |-- 203: long (nullable = true)
+ |    |-- 204: long (nullable = true)
+ |    |-- 205: long (nullable = true)
+ |    |-- 206: long (nullable = true)
+ |    |-- 207: long (nullable = true)
+ |    |-- 208: long (nullable = true)
+ |    |-- 209: long (nullable = true)
+ |    |-- 210: long (nullable = true)
+ |    |-- 211: long (nullable = true)
+ |    |-- 212: long (nullable = true)
+ |    |-- 213: long (nullable = true)
+ |    |-- 214: long (nullable = true)
+ |    |-- 215: long (nullable = true)
+ |    |-- 216: long (nullable = true)
+ |    |-- 217: long (nullable = true)
+ |    |-- 218: long (nullable = true)
+ |    |-- 219: long (nullable = true)
+ |    |-- 220: long (nullable = true)
+ |    |-- 221: long (nullable = true)
+ |    |-- 222: long (nullable = true)
+ |    |-- 223: long (nullable = true)
+ |    |-- 224: long (nullable = true)
+ |    |-- 225: long (nullable = true)
+ |    |-- 226: long (nullable = true)
+ |    |-- 227: long (nullable = true)
+ |    |-- 228: long (nullable = true)
+ |    |-- 229: long (nullable = true)
+ |    |-- 230: long (nullable = true)
+ |-- proflabel: long (nullable = true)
+ |-- urs: string (nullable = true)
+ |-- zodiac: long (nullable = true)
+
+ {
+    "rid": "1@163.com@thanks”,   用md5值表示
+    "bslocation": 11,            户籍城市bslocation
+    "bsyear": "19911002",    生日bsyear
+    "bsyearlevel": 4,            年龄段bsyearlevel
+    "constellation": 11,        星座constellation
+    "devcompany": 31,        手机品牌devcompany
+    "devmodel": 41,            手机型号（一级）devmodel
+    "flydays": 4,            多少天乘坐飞机/年 flydays
+    "flytimes": 3,           飞行次数/年flytimes
+    "freloc": 11,            常驻城市freloc
+    "gender": "M",        性别gender
+    "haschild": 1,           是否有小孩haschild
+    "lalodetail": [    经纬度明细lalodetail
+        {
+            "lat": "22.67960",
+            "loc": 88,
+            "lon": "114.03564",
+            "timestamp": 1482317424
+        },
+        {
+            "lat": "22.67960",
+            "loc": 88,
+            "lon": "114.03564",
+            "timestamp": 1482317424
+        }
+        …… // 30天内数据，当前每天最多30个，所以当前最多900个
+    ],
+    "ebinter": {   海淘购物品类偏好ebinter
+        "185": 24258,     # 185表示子类，例如：食品；24258表示权重
+        "715": 11934,
+        "815": 42659
+         … // 偏好值当前20左右，以后会慢慢变多，甚至上千
+    },
+    “eduinter": { 教育内容偏好eduinter
+        "130": 96869,
+        "135": 72448,
+        "881": 64271
+         … // 偏好值当前20左右，以后会慢慢变多，甚至上千
+    },
+     "mappinter": {互联网应用类型偏好mappinter
+        "130": 96869,
+        "135": 72448,
+        "881": 64271
+         … // 偏好值当前20左右，以后会慢慢变多，甚至上千
+    },
+    "musicinter": {音乐内容偏好musicinter
+        "77": 76911,
+        "221": 39969,
+        "832": 5598
+         … // 偏好值当前20左右，以后会慢慢变多，甚至上千
+    },
+    "netactive": 22,    上网活跃度netactive
+    "nethabit": [   上网时间偏好nethabit
+        10,
+        13
+    ],
+    "newsinter": {资讯内容偏好newsinter
+        "122": 56764,
+        "224": 68494,
+        "282": 20084
+         … // 偏好值当前20左右，以后会慢慢变多，甚至上千
+    },
+    "proflabel": 6,                          职业类型proflabel
+    "zodiac": 21                             属相zodiac
+}

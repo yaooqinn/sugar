@@ -1,0 +1,17 @@
+spark.ssl.enabled,FALSE,"Whether to enable SSL connections on all supported protocols. 
+When spark.ssl.enabled is configured, spark.ssl.protocol is required. 
+All the SSL settings like spark.ssl.xxx where xxx is a particular configuration property, denote the global configuration for all the supported protocols. In order to override the global configuration for the particular protocol, the properties must be overwritten in the protocol-specific namespace. 
+Use spark.ssl.YYY.XXX settings to overwrite the global configuration for particular protocol denoted by YYY. Example values for YYY include fs, ui, standalone, and historyServer. See SSL Configuration for details on hierarchical SSL configuration for services.",12
+spark.ssl.[namespace].port,None,"The port where the SSL service will listen on. 
+The port must be defined within a namespace configuration; see SSL Configuration for the available namespaces. 
+When not set, the SSL port will be derived from the non-SSL port for the same service. A value of ""0"" will make the service bind to an ephemeral port.",12
+spark.ssl.enabledAlgorithms,Empty,"A comma separated list of ciphers. The specified ciphers must be supported by JVM. The reference list of protocols one can find on this page. Note: If not set, it will use the default cipher suites of JVM.",12
+spark.ssl.keyPassword,None,A password to the private key in key-store.,12
+spark.ssl.keyStore,None,A path to a key-store file. The path can be absolute or relative to the directory where the component is started in.,12
+spark.ssl.keyStorePassword,None,A password to the key-store.,12
+spark.ssl.keyStoreType,JKS,The type of the key-store.,12
+spark.ssl.protocol,None,A protocol name. The protocol must be supported by JVM. The reference list of protocols one can find on this page.,12
+spark.ssl.needClientAuth,FALSE,Set true if SSL needs client authentication.,12
+spark.ssl.trustStore,None,A path to a trust-store file. The path can be absolute or relative to the directory where the component is started in.,12
+spark.ssl.trustStorePassword,None,A password to the trust-store.,12
+spark.ssl.trustStoreType,JKS,The type of the trust-store.,12

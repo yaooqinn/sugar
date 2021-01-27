@@ -1,0 +1,20 @@
+spark.eventLog.logBlockUpdates.enabled,FALSE,"Whether to log events for every block update, if spark.eventLog.enabled is true. *Warning*: This will increase the size of the event log considerably.",4
+spark.eventLog.compress,FALSE,"Whether to compress logged events, if spark.eventLog.enabled is true. Compression will use spark.io.compression.codec.",4
+spark.eventLog.dir,file:///tmp/spark-events,"Base directory in which Spark events are logged, if spark.eventLog.enabledis true. Within this base directory, Spark creates a sub-directory for each application, and logs the events specific to the application in this directory. Users may want to set this to a unified location like an HDFS directory so history files can be read by the history server.",4
+spark.eventLog.enabled,FALSE,"Whether to log Spark events, useful for reconstructing the Web UI after the application has finished.",4
+spark.eventLog.overwrite,FALSE,Whether to overwrite any existing files.,4
+spark.eventLog.buffer.kb,100k,"Buffer size to use when writing to output streams, in KiB unless otherwise specified.",4
+spark.ui.enabled,TRUE,Whether to run the web UI for the Spark application.,4
+spark.ui.killEnabled,TRUE,Allows jobs and stages to be killed from the web UI.,4
+spark.ui.port,4040,"Port for your application's dashboard, which shows memory and workload data.",4
+spark.ui.retainedJobs,1000,"How many jobs the Spark UI and status APIs remember before garbage collecting. This is a target maximum, and fewer elements may be retained in some circumstances.",4
+spark.ui.retainedStages,1000,"How many stages the Spark UI and status APIs remember before garbage collecting. This is a target maximum, and fewer elements may be retained in some circumstances.",4
+spark.ui.retainedTasks,100000,"How many tasks the Spark UI and status APIs remember before garbage collecting. This is a target maximum, and fewer elements may be retained in some circumstances.",4
+spark.ui.reverseProxy,FALSE,"Enable running Spark Master as reverse proxy for worker and application UIs. In this mode, Spark master will reverse proxy the worker and application UIs to enable access without requiring direct access to their hosts. Use it with caution, as worker and application UI will not be accessible directly, you will only be able to access them through spark master/proxy public URL. This setting affects all the workers and application UIs running in the cluster and must be set on all the workers, drivers and masters.",4
+spark.ui.reverseProxyUrl,,This is the URL where your proxy is running. This URL is for proxy which is running in front of Spark Master. This is useful when running proxy for authentication e.g. OAuth proxy. Make sure this is a complete URL including scheme (http/https) and port to reach your proxy.,4
+spark.ui.showConsoleProgress,TRUE,"Show the progress bar in the console. The progress bar shows the progress of stages that run for longer than 500ms. If multiple stages run at the same time, multiple progress bars will be displayed on the same line.",4
+spark.worker.ui.retainedExecutors,1000,How many finished executors the Spark UI and status APIs remember before garbage collecting.,4
+spark.worker.ui.retainedDrivers,1000,How many finished drivers the Spark UI and status APIs remember before garbage collecting.,4
+spark.sql.ui.retainedExecutions,1000,How many finished executions the Spark UI and status APIs remember before garbage collecting.,4
+spark.streaming.ui.retainedBatches,1000,How many finished batches the Spark UI and status APIs remember before garbage collecting.,4
+spark.ui.retainedDeadExecutors,100,How many dead executors the Spark UI and status APIs remember before garbage collecting.,4

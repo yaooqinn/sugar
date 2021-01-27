@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+osascript -e 'tell application "Tunnelblick"' \
+          -e '  get name of first configuration' \
+          -e '  connect result' \
+          -e '  repeat until result = "CONNECTED"' \
+          -e '    delay 1' \
+          -e '    get state of first configuration' \
+          -e '  end repeat' \
+          -e 'end tell'

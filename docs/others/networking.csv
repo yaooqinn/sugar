@@ -1,0 +1,13 @@
+spark.rpc.message.maxSize,128,"Maximum message size (in MB) to allow in ""control plane"" communication; generally only applies to map output size information sent between executors and the driver. Increase this if you are running jobs with many thousands of map and reduce tasks and see messages about the RPC message size.",8
+spark.blockManager.port,(random),Port for all block managers to listen on. These exist on both the driver and the executors.,8
+spark.driver.blockManager.port,(value of spark.blockManager.port),"Driver-specific port for the block manager to listen on, for cases where it cannot use the same configuration as executors.",8
+spark.driver.bindAddress,(value of spark.driver.host),"Hostname or IP address where to bind listening sockets. This config overrides the SPARK_LOCAL_IP environment variable (see below). 
+It also allows a different address from the local one to be advertised to executors or external systems. This is useful, for example, when running containers with bridged networking. For this to properly work, the different ports used by the driver (RPC, block manager and UI) need to be forwarded from the container's host.",8
+spark.driver.host,(local hostname),Hostname or IP address for the driver. This is used for communicating with the executors and the standalone Master.,8
+spark.driver.port,(random),Port for the driver to listen on. This is used for communicating with the executors and the standalone Master.,8
+spark.network.timeout,120s,"Default timeout for all network interactions. This config will be used in place ofspark.core.connection.ack.wait.timeout,spark.storage.blockManagerSlaveTimeoutMs,spark.shuffle.io.connectionTimeout, spark.rpc.askTimeout orspark.rpc.lookupTimeout if they are not configured.",8
+spark.port.maxRetries,16,"Maximum number of retries when binding to a port before giving up. When a port is given a specific value (non 0), each subsequent retry will increment the port used in the previous attempt by 1 before retrying. This essentially allows it to try a range of ports from the start port specified to port + maxRetries.",8
+spark.rpc.numRetries,3,Number of times to retry before an RPC task gives up. An RPC task will run at most times of this number.,8
+spark.rpc.retry.wait,3s,Duration for an RPC ask operation to wait before retrying.,8
+spark.rpc.askTimeout,spark.network.timeout,Duration for an RPC ask operation to wait before timing out.,8
+spark.rpc.lookupTimeout,120s,Duration for an RPC remote endpoint lookup operation to wait before timing out.,8
