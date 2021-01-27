@@ -80,7 +80,7 @@ MyDataSourceReader extend DataSourceReader with SupportsPushdownRequiredColumn w
 
 ## 读取示意
 
-<img src="../../../imgs/datasourcev2_read_side.png" style="zoom:0.85">
+<img src="../../imgs/datasourcev2_read_side.png" style="zoom:0.85">
 
 1. driver端获取schema信息
     - 如果实现[ReadSupportWithSchema](https://github.com/apache/spark/blob/master/sql/core/src/main/java/org/apache/spark/sql/sources/v2/ReadSupportWithSchema.java), 就会使用用户提供的schema信息
@@ -104,7 +104,7 @@ MyDataSourceReader extend DataSourceReader with SupportsPushdownRequiredColumn w
 过程抽象如下图，
 
 
-<img src="../../../imgs/datasourcev2_read_side_2.png" style="zoom:0.45">
+<img src="../../imgs/datasourcev2_read_side_2.png" style="zoom:0.45">
 
 
 ## 写示意
