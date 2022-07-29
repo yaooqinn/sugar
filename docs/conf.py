@@ -27,11 +27,16 @@ import sphinx_markdown_tables
 import recommonmark
 from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
-# source_parsers = {
-#     '.md': CommonMarkParser,
-# }
 
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'restructuredtext',
+    '.md': 'markdown',
+}
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
 
 # -- Project information -----------------------------------------------------
 
@@ -57,6 +62,7 @@ extensions = [
     'notfound.extension',
 ]
 
+
 master_doc = 'index'
 
 
@@ -81,7 +87,25 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+
+html_theme = 'sphinx_book_theme'
+html_theme_options = {
+    "repository_url": "https://github.com/apache/incubator-kyuubi",
+    "use_repository_button": True,
+    "use_edit_page_button": True,
+    "use_download_button": True,
+    "use_fullscreen_button": True,
+    "repository_branch": "master",
+    "path_to_docs": "docs",
+    "logo_only": True,
+    "home_page_in_toc": True,
+    "show_toc_level": 2,
+    "announcement": "&#129418; Welcome to Kyuubi’s online documentation &#x2728;, v" + release,
+}
+
+html_logo = 'imgs/logos/android.png'
+html_favicon = 'imgs/logos/android.png'
+html_title = "Kent Yao's Blog"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
